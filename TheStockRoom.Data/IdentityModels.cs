@@ -32,9 +32,9 @@ namespace TheStockRoom.Data
             return new ApplicationDbContext();
         }
         public DbSet<Shelf> Shelves { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Catalogue> Catalogues { get; set; }
-        public DbSet<ProductCatalogueJoin> ProductCatalogueJoins { get; set; }
+        public DbSet<Item> Products { get; set; }
+        public DbSet<Collection> Catalogues { get; set; }
+        public DbSet<ShelvedItem> ProductCatalogueJoins { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -43,7 +43,7 @@ namespace TheStockRoom.Data
             modelBuilder
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
-                .Add(new IdentityUserLoginConfiguration());
+                .Add(new IdentityUserRoleConfiguration());
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
