@@ -34,7 +34,7 @@ namespace TheStockRoom.Data
         public DbSet<Shelf> Shelves { get; set; }
         public DbSet<Item> Products { get; set; }
         public DbSet<Collection> Catalogues { get; set; }
-        public DbSet<ShelvedItem> ProductCatalogueJoins { get; set; }
+        public DbSet<ItemLocation> ProductCatalogueJoins { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

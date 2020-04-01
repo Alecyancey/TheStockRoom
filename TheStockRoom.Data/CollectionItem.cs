@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace TheStockRoom.Data
 {
-    public class CollectionShelvedItem
+    public class CollectionItem
     {
         [Key]
-        public int CollectionShelvedItemId { get; set; }
+        public int CollectionItemId { get; set; }
         public int CollectionId { get; set; }
         [ForeignKey("CollectionId")]
         public virtual Collection Collection { get; set; }
-        public int ShelvedItemId { get; set; }
-        [ForeignKey("ShelvedItemId")]
-        public virtual ShelvedItem ShelvedItem { get; set; }
-
+        public int ItemId { get; set; }
+        [ForeignKey("ItemId")]
+        public virtual Item Item { get; set; }
+        
     }
 }
