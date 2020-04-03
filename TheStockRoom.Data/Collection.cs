@@ -12,6 +12,6 @@ namespace TheStockRoom.Data
         [Key]
         public int CollectionId { get; set; }
         public string Title { get; set; }
-        public virtual ICollection<CollectionShelvedItem> CollectionItems { get; set; }
+        public virtual ICollection<CollectionItem> CollectionItems { get; set; }
     }
 }

@@ -12,10 +12,14 @@ namespace TheStockRoom.Data
     {
         [Key]
         public int ShelfId { get; set; }
-        public int SetRowNumber { get; set; }
-        public int SetColumnNumber { get; set; }
-        public double Height { get; set; }
-        public double Width { get; set; }
-        public virtual ICollection<ShelvedItem> Items { get; set; }
+        public double AdjustHeight { get; set; }
+        public double AdjustWidth { get; set; }
+        public int AdjustColumnNumber { get; set; }
+        public int AdjustRowNumber { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
+        public int ShelvingUnitId { get; set; }
+        [ForeignKey("ShelvingUnitId")]
+        public virtual ShelvingUnit Unit { get; set; }
     }
 }
+

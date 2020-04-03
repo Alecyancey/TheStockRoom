@@ -55,16 +55,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collection.cs" />
-    <Compile Include="CollectionShelvedItem.cs" />
+    <Compile Include="CollectionItem.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Item.cs" />
-    <Compile Include="ShelvedItem.cs" />
+    <Compile Include="Migrations\202004012343563_FixedShelfRelationships.cs" />
+    <Compile Include="Migrations\202004012343563_FixedShelfRelationships.Designer.cs">
+      <DependentUpon>202004012343563_FixedShelfRelationships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ItemLocation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShelvingUnit.cs" />
     <Compile Include="Shelf.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004012343563_FixedShelfRelationships.resx">
+      <DependentUpon>202004012343563_FixedShelfRelationships.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
